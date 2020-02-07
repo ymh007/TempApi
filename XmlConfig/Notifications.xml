@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="10" >
+  <Site Path="http://notification.sinooceangroup.com/">
+    <Webs>
+      <Web Path="Company01" CateGoryType="事业部" ComPanyName="开发事业一部" ComPanyShortName="开发一部" ID="17E1419A-24DF-43B2-9C98-815EFB298AA6">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="AA9C21B9-76B3-4A72-8BE8-EF5FF7382A6B"/>
+        </Lists>
+      </Web>
+      <Web Path="Company02" CateGoryType="事业部" ComPanyName="开发事业二部" ComPanyShortName="开发二部" ID="593B7965-8799-4BA3-90C6-23B1DC4B8851">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="87025C7B-C4A8-4BB5-B963-BF89577C98B9"/>
+        </Lists>
+      </Web>
+      <Web Path="Company03" CateGoryType="事业部" ComPanyName="开发事业三部" ComPanyShortName="开发三部" ID="F7D3A830-514B-475A-8B44-F437A321AA32">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="168A78C4-8314-4DF9-BE7D-9BEBD38FF16D"/>
+        </Lists>
+      </Web>
+      <Web Path="Company04" CateGoryType="事业部" ComPanyName="开发事业四部" ComPanyShortName="开发四部" ID="49E21F85-8A2D-48A9-BB97-9D8F85DC830E">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="3DFADD18-A685-49AE-9323-5A10B40651F8"/>
+        </Lists>
+      </Web>
+      <Web Path="Company05" CateGoryType="事业部" ComPanyName="写字楼事业部" ComPanyShortName="写字楼" ID="C2C8AE38-602C-4DAA-9C47-A827B1BF11B3">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="B8616D95-BF63-4892-9E8A-040145DADA71"/>
+        </Lists>
+      </Web>
+      <Web Path="Company06" CateGoryType="事业部" ComPanyName="商业地产事业部" ComPanyShortName="商业地产" ID="11C60668-949A-4DC3-B900-1A65C7C3C686">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="C7A7A6DB-5613-479E-855F-F912AFB9BC03"/>
+        </Lists>
+      </Web>
+      <Web Path="Company07" CateGoryType="事业部" ComPanyName="产品营造事业部" ComPanyShortName="产品营造" ID="FD497FEE-6A87-43A3-BC33-E829678BD770">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="8570B383-3714-4D26-985A-3A82F3747005"/>
+        </Lists>
+      </Web>
+      <Web Path="Company08" CateGoryType="事业部" ComPanyName="客户服务业事业部" ComPanyShortName="客户服务" ID="662D05FD-AA4B-499E-8694-C299964E61E6">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="F3D742EE-0B78-4761-BEF6-C0CFF7701F01"/>
+        </Lists>
+      </Web>
+      <Web Path="Company09" CateGoryType="事业部" ComPanyName="资本运营事业部" ComPanyShortName="资本运营" ID="AE15AE7F-4C9B-458A-9BC3-ABD9D0698232">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="DE244F48-111F-4143-9A25-DC81483C7800"/>
+        </Lists>
+      </Web>
+      <Web Path="Company10" CateGoryType="事业部" ComPanyName="资产管理事业部" ComPanyShortName="资产管理" ID="29D5B61A-42DF-4EF3-8360-2A51AE9C2450">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="CB11AA6F-48E5-491C-8ECA-81565496E8D0"/>
+        </Lists>
+      </Web>
+      <Web Path="Company11" ComPanyName="职能中心" ComPanyShortName="职能中心" ID="E9E9CA44-9F5A-43E8-82C5-EA14884C86EB">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="D2E80C55-F5D0-4C2E-84B6-C6BDE9B68AE5"/>
+        </Lists>
+      </Web>
+      <Web Path="Company13" ComPanyName="远洋邦邦" ComPanyShortName="远洋邦邦"  ID="D37D2AD0-F85C-4145-90B4-11B48CC6E58C">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="B0CAEBC3-69A1-4883-B0C3-8CB60B1F7168"></List>
+        </Lists>
+      </Web>
+      <Web Path="Company14" ComPanyName="远洋党委" ComPanyShortName="远洋党委"  ID="971690D5-557C-4975-9AF0-3CDF00643F5D">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="CC47BE03-A0AF-4ADF-8410-ABF247143A10"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

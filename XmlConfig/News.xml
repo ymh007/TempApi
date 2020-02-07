@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="20">
+  <Site Path="http://km.sinoocean-test.com/sites/NewsCenter/">
+    <Webs>
+      <Web Path="groupnews"  Page="GroupNewsList.aspx"  Name="集团新闻" ID="FBB85F14-D478-4F56-B120-B3F163710DD9">
+        <Lists>
+          <List Name="页面" Path="pages" ID="A8F5690C-24D1-4A28-AF6A-B1A634E0AE50"></List>
+        </Lists>
+      </Web>
+      <Web Path="departmentnews" Page="GroupNewsList.aspx"   Name="各单位新闻" ID="B1B477D9-F678-49C8-8932-2845142D4E6B">
+        <Lists>
+          <List Name="页面" Path="pages" ID="18A6005C-09A4-4759-A23A-737C13818622"></List>
+        </Lists>
+      </Web>
+      <Web Path="productionnews" Page="GroupNewsList.aspx"  Name="产品新闻" ID="8B48447F-34E6-46EE-BADF-2F8C0845840B">
+        <Lists>
+          <List Name="页面" Path="pages" ID="EBC6ECAA-1C1F-4955-B7DE-F5C9181941CF"></List>
+        </Lists>
+      </Web>
+      <Web Path="seagullIVnews" Page="GroupNewsList.aspx"  Name="海鸥IV新闻" ID="992EA288-6DDB-416A-B996-6A231B39D03E">
+        <Lists>
+          <List Name="页面" Path="pages" ID="CA42E553-84FA-400C-BF77-93D98EB81039"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

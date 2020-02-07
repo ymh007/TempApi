@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="10">
+  <Site Path="http://km.sinoocean-test.com/HoldingCompany/" >
+    <Webs>
+      <Web Path="" Name="媒体监测" ID="77ebd57d-4cd1-4e4d-837b-a5b0e730114f">
+        <Lists>
+          <List Name="" ID="9B0D59FF-294D-497E-A6F3-EC0EEFDB7239"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

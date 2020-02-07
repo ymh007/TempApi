@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="7">
+  <Site Path="http://km.sinooceangroup.com/sites/NewsCenter/">
+    <Webs>
+      <Web Path="" Name="远洋集团新闻中心" ID="67CF1988-775A-4408-9D10-0B30BA781A7E">
+        <Lists>
+          <List Name="综合播报控制表" Path="pages" ID="810D96AF-A8AA-4663-A319-A49B2E219D7C"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

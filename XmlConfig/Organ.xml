@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites>
+  <Site Old="北京远联公司" NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="北京中联公司"  NewShort="开发事业一" New="开发事业一部"></Site>
+  <Site Old="北京远豪公司" NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="北京远盛公司"  NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="北京地区管理部"  NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="北京鑫洋公司"  NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="天津公司"  NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="秦皇岛公司"  NewShort="开发事业一"  New="开发事业一部"></Site>
+  <Site Old="海南公司"  NewShort="开发事业一"  New="开发事业一部"></Site>
+
+  <Site Old="大连明远公司"  NewShort="开发事业二"  New="开发事业二部"></Site>
+  <Site Old="大连广宇公司"  NewShort="开发事业二"  New="开发事业二部"></Site>
+  <Site Old="大连汇洋公司"  NewShort="开发事业二"  New="开发事业二部"></Site>
+  <Site Old="大连地区管理部"  NewShort="开发事业二"  New="开发事业二部"></Site>
+  <Site Old="长春公司"  NewShort="开发事业二"  New="开发事业二部"></Site>
+  <Site Old="沈阳公司"  NewShort="开发事业二"  New="开发事业二部"></Site>
+
+  <Site Old="上海公司"  NewShort="开发事业三"  New="开发事业三部"></Site>
+  <Site Old="武汉公司"  NewShort="开发事业三"  New="开发事业三部"></Site>
+  <Site Old="青岛公司"  NewShort="开发事业三"  New="开发事业三部"></Site>
+  <Site Old="杭州公司"  NewShort="开发事业三"  New="开发事业三部"></Site>
+  <Site Old="黄山公司"  NewShort="开发事业三"  New="开发事业三部"></Site>
+
+  <Site Old="中山公司"  NewShort="开发事业四"  New="开发事业四部"></Site>
+  <Site Old="西南公司"  NewShort="开发事业四"  New="开发事业四部"></Site>
+
+  <Site Old="商业地产事业部"  NewShort="商业地产事"  New="商业地产事业部"></Site>
+  <Site Old="CBD公司"  NewShort="写字楼事业"  New="写字楼事业部"></Site>
+  <Site Old="天江通睿"  NewShort="写字楼事业"  New="写字楼事业部"></Site>
+
+  <Site Old="大连远洋基业物业"  NewShort="客户服务业"  New="客户服务业事业部"></Site>
+  <Site Old="大连远洋基业物业管理有限公司"  NewShort="客户服务业"  New="客户服务业事业部"></Site>
+
+  <Site Old="盛洋公司"  NewShort="资本运营事"  New="资本运营事业部"></Site>
+  <Site Old="远津公司"  NewShort="资本运营事"  New="资本运营事业部"></Site>
+  <Site Old="房地产金融事业部"  NewShort="资本运营事"  New="资本运营事业部"></Site>
+
+  <Site Old="远洋国际建设"  NewShort="产品营造事"  New="产品营造事业部"></Site>
+  <Site Old="酒店物业"  NewShort="客户服务业"  New="客户服务业事业部"></Site>
+  <Site Old="中广公司"  NewShort="产品营造事"  New="产品营造事业部"></Site>
+  <Site Old="基业"  NewShort="客户服务业"  New="客户服务业事业部"></Site>
+  <Site Old="养老业务中心"  NewShort="客户服务业"  New="客户服务业事业部"></Site>
+
+  <Site Old="远洋嘉业"  NewShort="其它单位"  New="其它单位"></Site>
+  <Site Old="重庆高尔夫公司"  NewShort="其它单位"  New="其它单位"></Site>
+</Sites>

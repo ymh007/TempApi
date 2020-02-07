@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<workMessage>
+  <Field>100</Field>
+  <item>
+    <id>北京市</id>
+    <ontime>08:30:00</ontime>
+    <offtime>17:30:00</offtime>
+    <lng>116.49153336882591</lng>
+    <lat>39.914699544105775</lat>
+  </item>
+  <item>
+    <id>西安市</id>
+    <ontime>09:00:00</ontime>
+    <offtime>18:00:00</offtime>
+    <lng>108.88236120343208</lng>
+    <lat>34.22358938509809</lat>
+  </item>
+</workMessage>

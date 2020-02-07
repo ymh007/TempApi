@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="6">
+  <Site Path="http://notification.sinoocean-test.com/" >
+    <Webs>
+      <Web Path="Company12" ComPanyName="远洋地产" ID="50DEE95B-48EC-4108-ACA7-DE855CF26121">
+        <Lists>
+          <List Name="通知纪要推荐表" Path="Lists/List9" ID="B8DA1E3B-3C51-4834-A14A-8831C88D14FD"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

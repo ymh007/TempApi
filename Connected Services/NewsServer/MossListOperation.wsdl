@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="getNotificationsStringBySPSiteDataQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryListsString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ViewFieldsString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryWebs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowLimit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNotificationsStringBySPSiteDataQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNotificationsStringBySPSiteDataQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewsStringBySPSiteDataQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="webUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryListsString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ViewFieldsString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryWebs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowLimit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewsStringBySPSiteDataQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewsStringBySPSiteDataQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWebByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getWebByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getWebByIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListByListID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListByListIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListByListIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemCollectionByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ViewFieldsString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ViewAttributesString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rowLimit" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemCollectionByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListItemCollectionByQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListFieldsByListItemID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListFieldsByListItemIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListFieldsByListItemIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemByListItemID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="listItemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getListItemByListItemIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListItemByListItemIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemAttachmentsByListItemID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listItemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemAttachmentsByListItemIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListItemAttachmentsByListItemIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemAgentByListItemID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="webID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="listItemID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListItemAgentByListItemIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListItemAgentByListItemIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:getNotificationsStringBySPSiteDataQuery" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:getNotificationsStringBySPSiteDataQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:getNewsStringBySPSiteDataQuery" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:getNewsStringBySPSiteDataQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWebByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getWebByID" />
+  </wsdl:message>
+  <wsdl:message name="getWebByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getWebByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListByListIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getListByListID" />
+  </wsdl:message>
+  <wsdl:message name="getListByListIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getListByListIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListItemCollectionByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:getListItemCollectionByQuery" />
+  </wsdl:message>
+  <wsdl:message name="getListItemCollectionByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:getListItemCollectionByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListFieldsByListItemIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getListFieldsByListItemID" />
+  </wsdl:message>
+  <wsdl:message name="getListFieldsByListItemIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getListFieldsByListItemIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListItemByListItemIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getListItemByListItemID" />
+  </wsdl:message>
+  <wsdl:message name="getListItemByListItemIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getListItemByListItemIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListItemAttachmentsByListItemIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getListItemAttachmentsByListItemID" />
+  </wsdl:message>
+  <wsdl:message name="getListItemAttachmentsByListItemIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getListItemAttachmentsByListItemIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListItemAgentByListItemIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getListItemAgentByListItemID" />
+  </wsdl:message>
+  <wsdl:message name="getListItemAgentByListItemIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getListItemAgentByListItemIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQueryHttpGetIn">
+    <wsdl:part name="siteUrl" type="s:string" />
+    <wsdl:part name="webUrl" type="s:string" />
+    <wsdl:part name="queryListsString" type="s:string" />
+    <wsdl:part name="ViewFieldsString" type="s:string" />
+    <wsdl:part name="queryString" type="s:string" />
+    <wsdl:part name="queryWebs" type="s:string" />
+    <wsdl:part name="rowLimit" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQueryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQueryHttpGetIn">
+    <wsdl:part name="siteUrl" type="s:string" />
+    <wsdl:part name="webUrl" type="s:string" />
+    <wsdl:part name="queryListsString" type="s:string" />
+    <wsdl:part name="ViewFieldsString" type="s:string" />
+    <wsdl:part name="queryString" type="s:string" />
+    <wsdl:part name="queryWebs" type="s:string" />
+    <wsdl:part name="rowLimit" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQueryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQueryHttpPostIn">
+    <wsdl:part name="siteUrl" type="s:string" />
+    <wsdl:part name="webUrl" type="s:string" />
+    <wsdl:part name="queryListsString" type="s:string" />
+    <wsdl:part name="ViewFieldsString" type="s:string" />
+    <wsdl:part name="queryString" type="s:string" />
+    <wsdl:part name="queryWebs" type="s:string" />
+    <wsdl:part name="rowLimit" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getNotificationsStringBySPSiteDataQueryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQueryHttpPostIn">
+    <wsdl:part name="siteUrl" type="s:string" />
+    <wsdl:part name="webUrl" type="s:string" />
+    <wsdl:part name="queryListsString" type="s:string" />
+    <wsdl:part name="ViewFieldsString" type="s:string" />
+    <wsdl:part name="queryString" type="s:string" />
+    <wsdl:part name="queryWebs" type="s:string" />
+    <wsdl:part name="rowLimit" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getNewsStringBySPSiteDataQueryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MossListOperationSoap">
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNotificationsStringBySPSiteDataQuerySoapIn" />
+      <wsdl:output message="tns:getNotificationsStringBySPSiteDataQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNewsStringBySPSiteDataQuerySoapIn" />
+      <wsdl:output message="tns:getNewsStringBySPSiteDataQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getWebByID">
+      <wsdl:input message="tns:getWebByIDSoapIn" />
+      <wsdl:output message="tns:getWebByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListByListID">
+      <wsdl:input message="tns:getListByListIDSoapIn" />
+      <wsdl:output message="tns:getListByListIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListItemCollectionByQuery">
+      <wsdl:input message="tns:getListItemCollectionByQuerySoapIn" />
+      <wsdl:output message="tns:getListItemCollectionByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListFieldsByListItemID">
+      <wsdl:input message="tns:getListFieldsByListItemIDSoapIn" />
+      <wsdl:output message="tns:getListFieldsByListItemIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListItemByListItemID">
+      <wsdl:input message="tns:getListItemByListItemIDSoapIn" />
+      <wsdl:output message="tns:getListItemByListItemIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAttachmentsByListItemID">
+      <wsdl:input message="tns:getListItemAttachmentsByListItemIDSoapIn" />
+      <wsdl:output message="tns:getListItemAttachmentsByListItemIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAgentByListItemID">
+      <wsdl:input message="tns:getListItemAgentByListItemIDSoapIn" />
+      <wsdl:output message="tns:getListItemAgentByListItemIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MossListOperationHttpGet">
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNotificationsStringBySPSiteDataQueryHttpGetIn" />
+      <wsdl:output message="tns:getNotificationsStringBySPSiteDataQueryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNewsStringBySPSiteDataQueryHttpGetIn" />
+      <wsdl:output message="tns:getNewsStringBySPSiteDataQueryHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MossListOperationHttpPost">
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNotificationsStringBySPSiteDataQueryHttpPostIn" />
+      <wsdl:output message="tns:getNotificationsStringBySPSiteDataQueryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <wsdl:input message="tns:getNewsStringBySPSiteDataQueryHttpPostIn" />
+      <wsdl:output message="tns:getNewsStringBySPSiteDataQueryHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MossListOperationSoap" type="tns:MossListOperationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <soap:operation soapAction="http://tempuri.org/getNotificationsStringBySPSiteDataQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <soap:operation soapAction="http://tempuri.org/getNewsStringBySPSiteDataQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWebByID">
+      <soap:operation soapAction="http://tempuri.org/getWebByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListByListID">
+      <soap:operation soapAction="http://tempuri.org/getListByListID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemCollectionByQuery">
+      <soap:operation soapAction="http://tempuri.org/getListItemCollectionByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListFieldsByListItemID">
+      <soap:operation soapAction="http://tempuri.org/getListFieldsByListItemID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemByListItemID">
+      <soap:operation soapAction="http://tempuri.org/getListItemByListItemID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAttachmentsByListItemID">
+      <soap:operation soapAction="http://tempuri.org/getListItemAttachmentsByListItemID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAgentByListItemID">
+      <soap:operation soapAction="http://tempuri.org/getListItemAgentByListItemID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MossListOperationSoap12" type="tns:MossListOperationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <soap12:operation soapAction="http://tempuri.org/getNotificationsStringBySPSiteDataQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <soap12:operation soapAction="http://tempuri.org/getNewsStringBySPSiteDataQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWebByID">
+      <soap12:operation soapAction="http://tempuri.org/getWebByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListByListID">
+      <soap12:operation soapAction="http://tempuri.org/getListByListID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemCollectionByQuery">
+      <soap12:operation soapAction="http://tempuri.org/getListItemCollectionByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListFieldsByListItemID">
+      <soap12:operation soapAction="http://tempuri.org/getListFieldsByListItemID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemByListItemID">
+      <soap12:operation soapAction="http://tempuri.org/getListItemByListItemID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAttachmentsByListItemID">
+      <soap12:operation soapAction="http://tempuri.org/getListItemAttachmentsByListItemID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListItemAgentByListItemID">
+      <soap12:operation soapAction="http://tempuri.org/getListItemAgentByListItemID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MossListOperationHttpGet" type="tns:MossListOperationHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <http:operation location="/getNotificationsStringBySPSiteDataQuery" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <http:operation location="/getNewsStringBySPSiteDataQuery" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MossListOperationHttpPost" type="tns:MossListOperationHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getNotificationsStringBySPSiteDataQuery">
+      <http:operation location="/getNotificationsStringBySPSiteDataQuery" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewsStringBySPSiteDataQuery">
+      <http:operation location="/getNewsStringBySPSiteDataQuery" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MossListOperation">
+    <wsdl:port name="MossListOperationSoap" binding="tns:MossListOperationSoap">
+      <soap:address location="http://10.23.74.23:8080/SharePointService/SPReadService/MossListOperation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MossListOperationSoap12" binding="tns:MossListOperationSoap12">
+      <soap12:address location="http://10.23.74.23:8080/SharePointService/SPReadService/MossListOperation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MossListOperationHttpGet" binding="tns:MossListOperationHttpGet">
+      <http:address location="http://10.23.74.23:8080/SharePointService/SPReadService/MossListOperation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MossListOperationHttpPost" binding="tns:MossListOperationHttpPost">
+      <http:address location="http://10.23.74.23:8080/SharePointService/SPReadService/MossListOperation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

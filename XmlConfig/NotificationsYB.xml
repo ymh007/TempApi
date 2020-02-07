@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sites ReadCount="10" >
+  <Site Path="http://notification.sinoocean-test.com/">
+    <Webs>
+      <Web Path="Company13" ComPanyName="远洋邦邦" ComPanyShortName="远洋邦邦"  ID="D37D2AD0-F85C-4145-90B4-11B48CC6E58C">
+        <Lists>
+          <List Name="公司公告" Path="Lists/list" ID="B0CAEBC3-69A1-4883-B0C3-8CB60B1F7168"></List>
+        </Lists>
+      </Web>
+    </Webs>
+  </Site>
+</Sites>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetVCodeSMSVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVCodeSMSVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVCodeSMSVerificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSMSVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSMSVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSMSVerificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFixSMSVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFixSMSVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFixSMSVerificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVerification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="markCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckVerificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckVerificationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAuthenticationCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendAuthenticationCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendAuthenticationCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendVerificationCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendVerificationCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendVerificationCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetVCodeSMSVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVCodeSMSVerification" />
+  </wsdl:message>
+  <wsdl:message name="GetVCodeSMSVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVCodeSMSVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSMSVerification" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSMSVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFixSMSVerification" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFixSMSVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckVerification" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendAuthenticationCode" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendAuthenticationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendVerificationCode" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendVerificationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVCodeSMSVerificationHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="vcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVCodeSMSVerificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="markCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="authenticationCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeHttpGetIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVCodeSMSVerificationHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="vcode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVCodeSMSVerificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSMSVerificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFixSMSVerificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="markCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckVerificationHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="authenticationCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendAuthenticationCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeHttpPostIn">
+    <wsdl:part name="mobile" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendVerificationCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PostSMSForDHSTSoap">
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <wsdl:input message="tns:GetVCodeSMSVerificationSoapIn" />
+      <wsdl:output message="tns:GetVCodeSMSVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <wsdl:input message="tns:GetSMSVerificationSoapIn" />
+      <wsdl:output message="tns:GetSMSVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <wsdl:input message="tns:GetFixSMSVerificationSoapIn" />
+      <wsdl:output message="tns:GetFixSMSVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <wsdl:input message="tns:CheckVerificationSoapIn" />
+      <wsdl:output message="tns:CheckVerificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <wsdl:input message="tns:SendAuthenticationCodeSoapIn" />
+      <wsdl:output message="tns:SendAuthenticationCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <wsdl:input message="tns:SendVerificationCodeSoapIn" />
+      <wsdl:output message="tns:SendVerificationCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PostSMSForDHSTHttpGet">
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <wsdl:input message="tns:GetVCodeSMSVerificationHttpGetIn" />
+      <wsdl:output message="tns:GetVCodeSMSVerificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <wsdl:input message="tns:GetSMSVerificationHttpGetIn" />
+      <wsdl:output message="tns:GetSMSVerificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <wsdl:input message="tns:GetFixSMSVerificationHttpGetIn" />
+      <wsdl:output message="tns:GetFixSMSVerificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <wsdl:input message="tns:CheckVerificationHttpGetIn" />
+      <wsdl:output message="tns:CheckVerificationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <wsdl:input message="tns:SendAuthenticationCodeHttpGetIn" />
+      <wsdl:output message="tns:SendAuthenticationCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <wsdl:input message="tns:SendVerificationCodeHttpGetIn" />
+      <wsdl:output message="tns:SendVerificationCodeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PostSMSForDHSTHttpPost">
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <wsdl:input message="tns:GetVCodeSMSVerificationHttpPostIn" />
+      <wsdl:output message="tns:GetVCodeSMSVerificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <wsdl:input message="tns:GetSMSVerificationHttpPostIn" />
+      <wsdl:output message="tns:GetSMSVerificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <wsdl:input message="tns:GetFixSMSVerificationHttpPostIn" />
+      <wsdl:output message="tns:GetFixSMSVerificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <wsdl:input message="tns:CheckVerificationHttpPostIn" />
+      <wsdl:output message="tns:CheckVerificationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <wsdl:input message="tns:SendAuthenticationCodeHttpPostIn" />
+      <wsdl:output message="tns:SendAuthenticationCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <wsdl:input message="tns:SendVerificationCodeHttpPostIn" />
+      <wsdl:output message="tns:SendVerificationCodeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PostSMSForDHSTSoap" type="tns:PostSMSForDHSTSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <soap:operation soapAction="http://tempuri.org/GetVCodeSMSVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <soap:operation soapAction="http://tempuri.org/GetSMSVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <soap:operation soapAction="http://tempuri.org/GetFixSMSVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <soap:operation soapAction="http://tempuri.org/CheckVerification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <soap:operation soapAction="http://tempuri.org/SendAuthenticationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <soap:operation soapAction="http://tempuri.org/SendVerificationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PostSMSForDHSTSoap12" type="tns:PostSMSForDHSTSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <soap12:operation soapAction="http://tempuri.org/GetVCodeSMSVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <soap12:operation soapAction="http://tempuri.org/GetSMSVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <soap12:operation soapAction="http://tempuri.org/GetFixSMSVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <soap12:operation soapAction="http://tempuri.org/CheckVerification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <soap12:operation soapAction="http://tempuri.org/SendAuthenticationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <soap12:operation soapAction="http://tempuri.org/SendVerificationCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PostSMSForDHSTHttpGet" type="tns:PostSMSForDHSTHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <http:operation location="/GetVCodeSMSVerification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <http:operation location="/GetSMSVerification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <http:operation location="/GetFixSMSVerification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <http:operation location="/CheckVerification" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <http:operation location="/SendAuthenticationCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <http:operation location="/SendVerificationCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PostSMSForDHSTHttpPost" type="tns:PostSMSForDHSTHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetVCodeSMSVerification">
+      <http:operation location="/GetVCodeSMSVerification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMSVerification">
+      <http:operation location="/GetSMSVerification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixSMSVerification">
+      <http:operation location="/GetFixSMSVerification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVerification">
+      <http:operation location="/CheckVerification" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendAuthenticationCode">
+      <http:operation location="/SendAuthenticationCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerificationCode">
+      <http:operation location="/SendVerificationCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostSMSForDHST">
+    <wsdl:port name="PostSMSForDHSTSoap" binding="tns:PostSMSForDHSTSoap">
+      <soap:address location="http://www.yuanxin2015.com/MobileBusiness/MobileBusiness.Common/Services/PostSMSForDHST.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PostSMSForDHSTSoap12" binding="tns:PostSMSForDHSTSoap12">
+      <soap12:address location="http://www.yuanxin2015.com/MobileBusiness/MobileBusiness.Common/Services/PostSMSForDHST.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PostSMSForDHSTHttpGet" binding="tns:PostSMSForDHSTHttpGet">
+      <http:address location="http://www.yuanxin2015.com/MobileBusiness/MobileBusiness.Common/Services/PostSMSForDHST.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PostSMSForDHSTHttpPost" binding="tns:PostSMSForDHSTHttpPost">
+      <http:address location="http://www.yuanxin2015.com/MobileBusiness/MobileBusiness.Common/Services/PostSMSForDHST.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

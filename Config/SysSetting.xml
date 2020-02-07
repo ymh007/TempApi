@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SysSetting>
+  <Setting key="PageSize" value="30" desc="页大小"></Setting>
+  <Setting key="JoinProcess" value="1、支持活动。在活动规定时间内，参与者在特价房活动详情页面，点击“我要支持”参加项目。\r\n2、提交订单。点击“我要支持”后，填写真实姓名、身份证号码、手机号等基本信息。此信息为最终购房依据，请参与者确保信息真实有效，以免影响最终享受折扣资格。\r\n 3、现场确认。支付成功后，参与者需要到项目现场扫二维码进行现场确认。确认成功后，参与者会得到一个抽奖号码。\r\n 4、活动开奖。发起方在活动结束后，根据双色球开奖结果得出中奖号码（详见抽奖规则）。开奖过程公开透明，发起方会在项目公告发布相关开奖信息。\r\n5、订单退款。远薪众筹平台会在活动开奖后30个工作日内进行订单退款。" desc="特价房参与流程"></Setting>
+
+  <Setting key="LotteryRule" value="1、活动结束后，平台将对符合资格的参与者进行抽奖码的分配，并在远薪众筹APP上进行公布。\r\n2、活动结束后，平台将根据相隔最近一次的中国福利彩票双色球开奖结果，取6个红球，按照产生顺序，得一组数字A。\r\n2、活动结束后总支持人数，得到数字B。\r\n4、中奖号码：A除以B，余C，余数C即为中奖号码。余数为0，则选最大号码中奖。\r\n例：抽奖号码为：红球为03，24，12，32，08，13，蓝球为6，A即为32412320813；项目支持人数为185729，B即为185729，A/B=174514，余数为10813，中奖号即为10813。\r\n*支持人数=现场确认成功人数" desc="特价房抽奖规则"></Setting>
+
+  <Setting key="Declaration" value="1、建议活动参与者在参与活动前先核实购房资格，再参与本活动。如筹得折扣资格，但因参与者无购房资格而不能成功购房，与活动方无关，且筹得的折扣资格需持本人证件进行购房，不可转让折扣资格。\r\n2、涉及到中奖者的个人所得税及房屋购买相关税费等相关费用均由中奖者自行承担。\r\n3、活动参与者每人只能使用一个远薪众筹平台账号参与活动。使用虚假姓名或冒用他人姓名参与活动的，活动方有权取消其参与资格，并宣布其中奖无效，对此活动方不承担任何责任。\r\n4、在筹得折扣资格一周内为认领期，活动中奖者线下看房，并办理购房相关手续。在认领期内，若出现领奖者空缺的情形，包括但不限于中奖者放弃领奖，中奖者突发疾病或突遇意外身亡等，均视为中奖者自动放弃中奖资格，与活动方无关，且不再重复抽奖。" desc="特价房免责声明"></Setting>
+
+  <Group groupID="IOS" groupDesc="APP-IOS配置">
+    <Setting key="Version" value="2.26"></Setting>
+    <Setting key="Title" value="版本更新"></Setting>
+    <Setting key="Note" value="1、若干bug修复"></Setting>
+    <Setting key="IsPartUpgrade" value="true"></Setting>
+    <Setting key="WgtUrl" value="http%3a%2f%2fmtest.sinooceanland.com%2fzhongchou%2fwgt%2fios%2fcurrent.wgt"></Setting>
+    <!--<Setting key="WgtUrl" value="http://mtest.sinooceanland.com/zhongchou/wgt/ios/current.wgt"></Setting>-->
+    <Setting key="Url" value="https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fyuan-xin-zhong-chou%2Fid1052515260%3Fl%3Dzh%26ls%3D1%26mt%3D8"></Setting>
+    <!--<Setting key="Url" value="https://itunes.apple.com/us/app/yuan-xin-zhong-chou/id1052515260?l=zh&ls=1&mt=8"></Setting>-->
+  </Group>
+  <Group groupID="ANDROID" groupDesc="APP-Android配置">
+    <Setting key="Version" value="2.16"></Setting>
+    <Setting key="Title" value="版本更新 2.16"></Setting>
+    <Setting key="Note" value="1、若干bug修复"></Setting>
+    <Setting key="IsPartUpgrade" value="true"></Setting>
+    <Setting key="WgtUrl" value="http%3a%2f%2fmtest.sinooceanland.com%2fzhongchou%2fwgt%2fandroid%2fcurrent.wgt"></Setting>
+    <!--<Setting key="WgtUrl" value="http://mtest.sinooceanland.com/zhongchou/wgt/android/current.wgt"></Setting>-->
+    <Setting key="Url" value="http%3A%2F%2Fwww.pgyer.com%2Fapiv1%2Fapp%2Finstall%3FaId%3D165350a77da82100e1062c6af68a7aae%26_api_key%3D7585b478860b130428c98c53c2e208f1"></Setting>
+    <!--<Setting key="Url" value="http://www.pgyer.com/apiv1/app/install?aId=165350a77da82100e1062c6af68a7aae&_api_key=7585b478860b130428c98c53c2e208f1"></Setting>-->
+  </Group>
+  <Setting key="androidappname" value="android_com.yuanxin.zc_v2.1.6.apk">     </Setting>
+  <Setting key="androidappurl" value="~/File/android_com.yuanxin.zc_v2.1.6.apk">     </Setting>
+  <Group groupID="ServiceTel" groupDesc="客户电话">
+    <Setting key="AreaCode" value="010" desc="区号"></Setting>
+    <Setting key="Tel" value="59299780"></Setting>
+  </Group>
+
+  <Group groupID="JoinProcess" groupDesc="参与流程图片配置">
+    <Setting key="tejiafang-audit" value="liucheng-tejiafang-audit.jpg"></Setting>
+    <Setting key="tejiafang" value="liucheng-tejiafang.jpg"></Setting>
+    <Setting key="zaishou" value="liucheng-zaishou.jpg"></Setting>
+  </Group>
+  <Group groupID="Point" groupDesc="积分规则设置">
+    <Setting key="Sign"   value="2" type="1" text="签到"></Setting>
+    <Setting key="Share"  value="3" type="1" text="分享"></Setting>
+    <Setting key="Discuss" value="5" type="1" text="讨论"></Setting>
+    <Setting key="AvtivityIn" value="20" type="2" text="参与活动"></Setting>
+    <Setting key="CollectIn" value="20" type="2" text="参与征集"></Setting>
+    <Setting key="AssessAvtivity" value="20" type="2" text="评价活动"></Setting>
+    <Setting key="Perfect" value="20" type="3" text="补充个人资料"></Setting>
+    <Setting key="Gravatar" value="5" type="3" text="上传头像"></Setting>
+    <Setting key="Nickname" value="5" type="3" text="修改昵称"></Setting>
+    <Setting key="Praise" value="10" type="3" text="给活动点赞"></Setting>
+    <Setting key="FollowCrowdfund" value="10" type="3" text="关注一个众筹"></Setting>
+  </Group>
+
+  <Group groupID="ProcessStep_RealNameAuth" groupDesc="实名认证步骤描述">
+    <Setting key="Submit"  value="提交申请"  desc="您的申请已提交，我们会尽快处理，请耐心等待"></Setting>
+    <Setting key="Success"  value="审核通过" desc="恭喜，您已通过实名认证"></Setting>
+    <Setting key="Faid"  value="审核未通过" desc="很遗憾，您未通过实名认证"></Setting>
+  </Group>
+
+  <Group groupID="ProcessStep_LiferAudit" groupDesc="生活家审核进度">
+    <Setting key="Submit"  value="提交申请"  desc="您的申请已提交，我们将在3个工作日内完成审核，请耐心等待。"></Setting>
+    <Setting key="Auditing"  value="审核中" desc="审核中，请耐心等待。"></Setting>
+    <Setting key="Success"  value="审核通过" desc="恭喜，您已通过审核"></Setting>
+    <Setting key="Faid"  value="审核未通过" desc="对不起，审核未通过，请您仔细核对申请资料，保证照片清晰。"></Setting>
+  </Group>
+  <Group groupID="ProcessStep_OrderStatus_Topic" groupDesc="生活家订单状态流程描述">
+    <Setting key="Topic_Unaccepted_User"  value="待行家确认"  desc="已收到您的预约申请，请等待生活家处理"></Setting>
+    <Setting key="Topic_Unaccepted_Business"  value="待行家确认" desc="请及时处理预约，用户在等待您的回复"></Setting>
+    <Setting key="Refused"  value="生活家拒绝预约" desc=""></Setting>
+    <Setting key="Cancled"  value="用户取消预约" desc=""></Setting>
+    <Setting key="Topic_Unpaid_User"  value="待付款" desc="生活家已接受，等待您付款"></Setting>
+    <Setting key="Topic_Unpaid_Business"  value="待付款" desc=""></Setting>
+    <Setting key="Topic_Unconfirmed_Business"  value="待双方见面" desc="请按照约定的时间地点，准时赴约哦"></Setting>
+    <Setting key="Topic_Unconfirmed_User"  value="待双方见面" desc="请按照约定的时间地点，准时赴约哦"></Setting>
+    <Setting key="Topic_Unevaluated_Business"  value="待对方评价" desc="用户评价后，该订单将全部完成"></Setting>
+    <Setting key="Topic_Unevaluated_User"  value="评价" desc="请对本次约见进行评价"></Setting>
+    <Setting key="Topic_Completed_Business"  value="完成" desc="交易完成"></Setting>
+    <Setting key="Topic_Completed_User"  value="完成" desc="交易完成"></Setting>
+  </Group>
+
+  <Group groupID="ProcessStep_OrderStatus_Coupon" groupDesc="优惠券订单状态流程描述">
+    <Setting key="Coupon_Unpaid_User"  value="待支付"  desc="拍下成功，等待付款。"></Setting>
+    <Setting key="Coupon_Unpaid_Business"  value="待支付"  desc="买家已拍下，等待付款。"></Setting>
+    <Setting key="Coupon_UnDeliver_User"  value="待发货" desc="支付成功，待卖家发货。"></Setting>
+    <Setting key="Coupon_UnDeliver_Business"  value="待发货" desc="买家已支付，待发货。"></Setting>
+    <Setting key="Coupon_UnReceipted_User"  value="待收货" desc="发货成功，待收货。"></Setting>
+    <Setting key="Coupon_UnReceipted_Business"  value="待收货" desc="发货成功，待买家收货。"></Setting>
+    <Setting key="Coupon_Completed_User"  value="已完成" desc="买家已收货，订单完成。"></Setting>
+    <Setting key="Coupon_Completed_Business"  value="已完成" desc="买家已收货，订单完成。"></Setting>
+    <Setting key="Coupon_Cancled_Business"  value="用户取消预约" desc=""></Setting>
+    <Setting key="Coupon_Cancled_User"  value="您取消预约" desc=""></Setting>
+
+  </Group>
+
+  <Group groupID="Reason_OrderCancled" groupDesc="取消订单原因">
+    <Setting key="1"  value="最近时间安排有变，希望下次有机会再约。"  ></Setting>
+    <Setting key="2"  value="不小心拍错了话题，多有打扰，抱歉。" ></Setting>
+    <Setting key="3"  value="谢谢您，我的问题已解决。" ></Setting>
+    <Setting key="4"  value="其它原因。" ></Setting>
+  </Group>
+  <Group groupID="Reason_OrderRefuse" groupDesc="拒绝订单原因">
+    <Setting key="1"  value="最近时间安排紧张，希望下次有机会再约。"  ></Setting>
+    <Setting key="2"  value="不好意思，您的问题我提供不了帮助。" ></Setting>
+    <Setting key="3"  value="请补充个人信息，重新提交预约。" ></Setting>
+    <Setting key="4"  value="其它原因。" ></Setting>
+  </Group>
+
+</SysSetting>

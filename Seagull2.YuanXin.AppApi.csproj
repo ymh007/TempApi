@@ -1,0 +1,1299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77543AF3-7C1A-4684-BA76-EA78148C840D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seagull2.YuanXin.AppApi</RootNamespace>
+    <AssemblyName>Seagull2.YuanXin.AppApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aliyun.OSS">
+      <HintPath>lib\Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>packages\Grpc.Core.1.2.2\lib\net45\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MCS.Library, Version=1.3.4.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.1.3.4\lib\net40\MCS.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.ADHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.ADHelper.1.0.0.0\lib\net40\MCS.Library.ADHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.Compression, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7c704e212d216b47, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.Compression.1.0.0.0\lib\net40\MCS.Library.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.Data, Version=1.3.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.Data.1.3.0.0\lib\net40\MCS.Library.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.Office, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.Office.1.0.0.0\lib\net40\MCS.Library.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.Office.OpenXml.Excel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.Office.OpenXml.Excel.1.0.0.0\lib\net40\MCS.Library.Office.OpenXml.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.OGUPermission, Version=1.3.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.OGUPermission.1.3.0.0\lib\net40\MCS.Library.OGUPermission.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.Passport, Version=1.3.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.Passport.1.3.0.0\lib\net40\MCS.Library.Passport.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.SOA.DataObjects, Version=1.11.2.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\MCS.Library.SOA.DataObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.SOA.DataObjects.Questionnaire">
+      <HintPath>lib\MCS.Library.SOA.DataObjects.Questionnaire.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.SOA.DataObjects.Schemas.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.SOA.DataObjects.Schemas.Client.1.0.0.0\lib\net40\MCS.Library.SOA.DataObjects.Schemas.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.SOA.DataObjects.Security.AUClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.SOA.DataObjects.Security.AUClient.1.0.0.0\lib\net40\MCS.Library.SOA.DataObjects.Security.AUClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Library.WcfExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Library.WcfExtensions.1.0.0.0\lib\net40\MCS.Library.WcfExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Web.Library, Version=1.2.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Web.Library.1.2.0.0\lib\net40\MCS.Web.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Web.Library.Script.Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Web.Library.Script.Json.1.0.0.0\lib\net40\MCS.Web.Library.Script.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MCS.Web.Responsive.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\MCS.Web.Responsive.Library.1.0.0.0\lib\net40\MCS.Web.Responsive.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="MDXHelper">
+      <HintPath>lib\MDXHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="MobileBusiness.Common.Data">
+      <HintPath>lib\MobileBusiness.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPinyin">
+      <HintPath>lib\NPinyin.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.3.2\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagull2.Core, Version=2.1.0.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\Seagull2.Core.2.1.0\lib\net45\Seagull2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagull2.Owin, Version=2.7.1.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Seagull2.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagull2.Permission, Version=2.1.1.0, Culture=neutral, PublicKeyToken=62ea08f894871798, processorArchitecture=MSIL">
+      <HintPath>packages\Seagull2.Permission.2.1.1\lib\net45\Seagull2.Permission.dll</HintPath>
+    </Reference>
+    <Reference Include="Seagull2.Redis, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Seagull2.Redis.2.0.0\lib\net45\Seagull2.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="SinoOcean.Seagull2.Framework.Contracts">
+      <HintPath>lib\SinoOcean.Seagull2.Framework.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SinoOcean.Seagull2.Framework.MasterData">
+      <HintPath>lib\SinoOcean.Seagull2.Framework.MasterData.dll</HintPath>
+    </Reference>
+    <Reference Include="SinoOcean.Seagull2.SendExpressBroker">
+      <HintPath>lib\SinoOcean.Seagull2.SendExpressBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="SinoOcean.Seagull2.TransactionData.Meeting">
+      <HintPath>lib\SinoOcean.Seagull2.TransactionData.Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="SinoOcean.Seagull2.TransactionData.SecretaryService">
+      <HintPath>lib\SinoOcean.Seagull2.TransactionData.SecretaryService.dll</HintPath>
+    </Reference>
+    <Reference Include="SOL.Web.WeChat.ServiceClient">
+      <HintPath>lib\SOL.Web.WeChat.ServiceClient.dll</HintPath>
+    </Reference>
+    <Reference Include="SOL.Web.WeChat.ServiceContract">
+      <HintPath>lib\SOL.Web.WeChat.ServiceContract.dll</HintPath>
+    </Reference>
+    <Reference Include="SOS2.AnnualMeeting.MobileSite">
+      <HintPath>lib\SOS2.AnnualMeeting.MobileSite.dll</HintPath>
+    </Reference>
+    <Reference Include="SOS2.Meeting.MobileSite">
+      <HintPath>lib\SOS2.Meeting.MobileSite.dll</HintPath>
+    </Reference>
+    <Reference Include="SOS2.Questionnaire.MobileSite">
+      <HintPath>lib\SOS2.Questionnaire.MobileSite.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\StackExchange.Redis.1.2.1\lib\net45\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Interactive.Async, Version=3.0.1000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Interactive.Async.3.1.1\lib\net45\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4778.30637, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ThoughtWorks.QRCode.1.1.0\lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.3.2\lib\net40\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebApiContrib.Formatting.Jsonp, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WebApiContrib.Formatting.Jsonp.3.0.2\lib\net45\WebApiContrib.Formatting.Jsonp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework">
+      <HintPath>lib\YuanXin.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.Configuration">
+      <HintPath>lib\YuanXin.Framework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.DbHelper">
+      <HintPath>lib\YuanXin.Framework.DbHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.IM">
+      <HintPath>lib\YuanXin.Framework.IM.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.OAuth.Identity">
+      <HintPath>lib\YuanXin.Framework.OAuth.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.Oauth.SqlServer">
+      <HintPath>lib\YuanXin.Framework.Oauth.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="YuanXin.Framework.OauthInfrastructure">
+      <HintPath>lib\YuanXin.Framework.OauthInfrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\ActivityNew\ActivityApplyInfoAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityApplySetAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityApplySetOrigAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityCategoryAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityCategoryRecordAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityInfoAdapter.cs" />
+    <Compile Include="Adapter\ActivityNew\ActivityRecordAdapter.cs" />
+    <Compile Include="Adapter\Activity\ActivityAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\ContactAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\ContactsAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\EmailTempleAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\InvitedRecordAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\Seagull2RelationAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\SeagullUsersAdapter.cs" />
+    <Compile Include="Adapter\AddressBook\UpdatableAndLoadableAdapterBase.cs" />
+    <Compile Include="Adapter\AddressBook\UsersInfoExtendAdapter.cs" />
+    <Compile Include="Adapter\Advertisement\AdvertisementAdapter.cs" />
+    <Compile Include="Adapter\AppConfig\AppHomeSlideAdapter.cs" />
+    <Compile Include="Adapter\AppConfig\OceanDataAdapter.cs" />
+    <Compile Include="Adapter\APPLogin\ConnectionTokenAdapter.cs" />
+    <Compile Include="Adapter\APPLogin\LoginInfoAdapter.cs" />
+    <Compile Include="Adapter\BusinessCard\BusinessCardAdapter.cs" />
+    <Compile Include="Adapter\BusinessCard\BusinessCardPropertyAdapter.cs" />
+    <Compile Include="Adapter\Channel\ChannelAdapter.cs" />
+    <Compile Include="Adapter\Channel\ChannelFavAdapter.cs" />
+    <Compile Include="Adapter\Common\PersonUnitAdapter.cs" />
+    <Compile Include="Adapter\Conference\AttendeeAdapter.cs" />
+    <Compile Include="Adapter\Conference\BannerConfigAdapter.cs" />
+    <Compile Include="Adapter\Conference\ConferenceAdapter.cs" />
+    <Compile Include="Adapter\Conference\ConferenceAgendaAdapter.cs" />
+    <Compile Include="Adapter\Conference\ConferenceBigScreenAdapter.cs" />
+    <Compile Include="Adapter\Conference\ConferenceCompanyDialogAdapter.cs" />
+    <Compile Include="Adapter\Conference\ConferenceTopicsAdapter.cs" />
+    <Compile Include="Adapter\Conference\DisableSeatsAdapter.cs" />
+    <Compile Include="Adapter\Conference\MeetingMaterialAdapter.cs" />
+    <Compile Include="Adapter\Conference\NoticeAdapter.cs" />
+    <Compile Include="Adapter\Conference\SeatAdapter.cs" />
+    <Compile Include="Adapter\Conference\SignInAdapter.cs" />
+    <Compile Include="Adapter\Conference\SiteServiceAdapter.cs" />
+    <Compile Include="Adapter\Conference\SiteServiceTypeAdapter.cs" />
+    <Compile Include="Adapter\Conference\TopicPersonAdapter.cs" />
+    <Compile Include="Adapter\Conference\VehicleBookingAdapter.cs" />
+    <Compile Include="Adapter\Conference\WorkerAdapter.cs" />
+    <Compile Include="Adapter\Conference\WorkerTypeAdapter.cs" />
+    <Compile Include="Adapter\ContactsLabel\ContactsLabelAdapter.cs" />
+    <Compile Include="Adapter\ContactsLabel\ContactsLabelPersonAdapter.cs" />
+    <Compile Include="Adapter\Feedback\FeedbackAdapter.cs" />
+    <Compile Include="Adapter\Feedback\FeedbackImageAdapter.cs" />
+    <Compile Include="Adapter\Greetings\GreetingsAdapter.cs" />
+    <Compile Include="Adapter\Greetings\GreetingsContentAdapter.cs" />
+    <Compile Include="Adapter\IM\GroupInfoAdapter.cs" />
+    <Compile Include="Adapter\IM\GroupMemberAdapter.cs" />
+    <Compile Include="Adapter\InformationNews\ArticlePointAdapter.cs" />
+    <Compile Include="Adapter\InformationNews\CommentAdapter.cs" />
+    <Compile Include="Adapter\InformationNews\PointRecordAdapter.cs" />
+    <Compile Include="Adapter\InformationNews\VisitLogsAdapter.cs" />
+    <Compile Include="Adapter\Invoice\InvoiceAdapter.cs" />
+    <Compile Include="Adapter\Invoice\InvoiceHeaderAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\CommentAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\CommentListAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\ManagementReportAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\PointPraiseRecordAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\SiteVisitLogAdapter.cs" />
+    <Compile Include="Adapter\ManagementReport\ViewOrPraiseCountAdapter.cs" />
+    <Compile Include="Adapter\MessagePush\MessagePushGroupAdapter.cs" />
+    <Compile Include="Adapter\MessagePush\MessagePushGroupPersonAdapter.cs" />
+    <Compile Include="Adapter\MessagePush\MessagePushRecordAdapter.cs" />
+    <Compile Include="Adapter\Message\MessageAdapter.cs" />
+    <Compile Include="Adapter\Moss\NewsAdapter.cs" />
+    <Compile Include="Adapter\Moss\NoticeAdapter.cs" />
+    <Compile Include="Adapter\News\ImageProcessingCache.cs" />
+    <Compile Include="Adapter\News\NewsAdapter.cs" />
+    <Compile Include="Adapter\News\RecommendedImageNewsModelAdapter.cs" />
+    <Compile Include="Adapter\News\RecommendedNewsModelAdapter.cs" />
+    <Compile Include="Adapter\News\ResultMssageAdapter.cs" />
+    <Compile Include="Adapter\Notification\NotificationsAdapter.cs" />
+    <Compile Include="Adapter\PerformanceReport\EIPMenuAdapter.cs" />
+    <Compile Include="Adapter\PerformanceReport\PerformanceReportMenuAdapter.cs" />
+    <Compile Include="Adapter\PerformanceReport\PerformanceReportUserFocusAdapter.cs" />
+    <Compile Include="Adapter\PlanManage\PlanManageAdapter.cs" />
+    <Compile Include="Adapter\PunchManagement\PunchDepartmentAdapter.cs" />
+    <Compile Include="Adapter\PunchManagement\PunchManagementAdapter.cs" />
+    <Compile Include="Adapter\PunchManagement\PunchManagerAdapter.cs" />
+    <Compile Include="Adapter\PunchManagement\PunchPersonnelAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_Benchmark_EnterpriseSaleStatisticsAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_Benchmark_ProjectSaleStatisticalAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_EconomicAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_InfoAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_LandMarketAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_NHM_AnnualStatisticsAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_NHM_MonthlyStatisticsAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_PolicyAdapter.cs" />
+    <Compile Include="Adapter\ResearchData\RD_PopulationAdapter.cs" />
+    <Compile Include="Adapter\ScheduleManage\ScheduleManageAdapter.cs" />
+    <Compile Include="Adapter\ShareFile\ShareFileAdapter.cs" />
+    <Compile Include="Adapter\Share\ArticleAdapter.cs" />
+    <Compile Include="Adapter\Share\CommentAdapter.cs" />
+    <Compile Include="Adapter\Share\GroupAdapter.cs" />
+    <Compile Include="Adapter\Share\MenuAdapter.cs" />
+    <Compile Include="Adapter\Share\RecordAdapter.cs" />
+    <Compile Include="Adapter\Share\SendGroupAdapter.cs" />
+    <Compile Include="Adapter\Share\SendGroupPersonAdapter.cs" />
+    <Compile Include="Adapter\Sign\ComparePunchAdapater.cs" />
+    <Compile Include="Adapter\Sign\EmployeeServicesAdapter.cs" />
+    <Compile Include="Adapter\Sign\PunchMonthAdapter.cs" />
+    <Compile Include="Adapter\Sign\PunchQuickSettingAdapter.cs" />
+    <Compile Include="Adapter\Sign\PunchRemindSettingAdapter.cs" />
+    <Compile Include="Adapter\Sign\StandardPunchAdapater.cs" />
+    <Compile Include="Adapter\Stock\StockAdapter.cs" />
+    <Compile Include="Adapter\System\Sys_AuthorityManagementAdapter.cs" />
+    <Compile Include="Adapter\System\Sys_MenuManagementAdapter.cs" />
+    <Compile Include="Adapter\System\Sys_RoleManagementAdapter.cs" />
+    <Compile Include="Adapter\System\Sys_RoleUserManagementAdapter.cs" />
+    <Compile Include="Adapter\Sys_Menu\Sys_MenuAdapater.cs" />
+    <Compile Include="Adapter\Sys_Menu\Sys_UserAdapter.cs" />
+    <Compile Include="Adapter\Sys_Menu\Sys_UserMenuAdapter.cs" />
+    <Compile Include="Adapter\Task\TaskApapter.cs" />
+    <Compile Include="Adapter\Task\TaskCopyPersonApapter.cs" />
+    <Compile Include="Adapter\Task\TaskHideApapter.cs" />
+    <Compile Include="Adapter\Task\TaskMessageApapter.cs" />
+    <Compile Include="Adapter\Test\TestAdapter.cs" />
+    <Compile Include="Adapter\UrgeRecordAdapter\UrgeRecordAdapter.cs" />
+    <Compile Include="Adapter\UserBehavior\UserBehaviorLogAdapter.cs" />
+    <Compile Include="Adapter\UserBehavior\UserBehaviorModuleAdapter.cs" />
+    <Compile Include="Adapter\UserFav\UserFavInformationAdapter.cs" />
+    <Compile Include="Adapter\UserHeadPhoto\UserHeadPhotoAdapter.cs" />
+    <Compile Include="Adapter\UserOperationRecord\UserOperationRecordAdapter.cs" />
+    <Compile Include="Adapter\UserTaks\YXUserTaskAdapter.cs" />
+    <Compile Include="Adapter\Version\SystemUpdateRecordAdapter.cs" />
+    <Compile Include="Adapter\Vote\VoteInfoAdapter.cs" />
+    <Compile Include="Adapter\Vote\VoteManagerAdapter.cs" />
+    <Compile Include="Adapter\Vote\VoteOptionAdapter.cs" />
+    <Compile Include="Adapter\Vote\VotePersonAdapter.cs" />
+    <Compile Include="Adapter\Vote\VoteQuestionAdapter.cs" />
+    <Compile Include="Adapter\Vote\VoteRecordAdapter.cs" />
+    <Compile Include="Adapter\Weather\WeatherAdapter.cs" />
+    <Compile Include="Adapter\WorkRegionMenu\WorkRegionMenuAdapter.cs" />
+    <Compile Include="Adapter\WorkReport\WorkReportContentAdapter.cs" />
+    <Compile Include="Adapter\WorkReport\WorkReportDetailsAdapter.cs" />
+    <Compile Include="Adapter\WorkReport\WorkReportFieldAdapter.cs" />
+    <Compile Include="Adapter\WorkReport\WorkReportTemplateAdapter.cs" />
+    <Compile Include="Common\AttachmentPreviewService.cs" />
+    <Compile Include="Common\CacheService.cs" />
+    <Compile Include="Common\CommonService.cs" />
+    <Compile Include="Common\ConfigAppSetting.cs" />
+    <Compile Include="Common\ControllerService.cs" />
+    <Compile Include="Common\DataConvertHelper.cs" />
+    <Compile Include="Common\DataFilter.cs" />
+    <Compile Include="Common\ExcelService.cs" />
+    <Compile Include="Common\ExportExcelService.cs" />
+    <Compile Include="Common\FileService.cs" />
+    <Compile Include="Common\HtmlHelper.cs" />
+    <Compile Include="Common\HttpService.cs" />
+    <Compile Include="Common\IMService.cs" />
+    <Compile Include="Common\Log.cs" />
+    <Compile Include="Common\MailService.cs" />
+    <Compile Include="Common\MeetingService.cs" />
+    <Compile Include="Common\MossNewService.cs" />
+    <Compile Include="Common\MossNoticeService.cs" />
+    <Compile Include="Common\ObjectCopy.cs" />
+    <Compile Include="Common\PushService.cs" />
+    <Compile Include="Common\SqlDbHelper.cs" />
+    <Compile Include="Common\UserHeadPhotoService.cs" />
+    <Compile Include="Common\WXService.cs" />
+    <Compile Include="Configuration\UrlMappingConfigurationSection.cs" />
+    <Compile Include="Configuration\UrlMappingElement.cs" />
+    <Compile Include="Config\FeedbackConfig.cs" />
+    <Compile Include="Config\SwaggerConfig.cs" />
+    <Compile Include="Connected Services\NewsServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NotificationsServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PostSMSForDHSTSoap\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ActivityController.cs" />
+    <Compile Include="Controllers\ActivityNew\ActivityApplyInfoController.cs" />
+    <Compile Include="Controllers\ActivityNew\ActivityCategoryController.cs" />
+    <Compile Include="Controllers\ActivityNew\ActivityInfoController.cs" />
+    <Compile Include="Controllers\ActivityNew\ActivityRecordController.cs" />
+    <Compile Include="Controllers\ActivityZhongChouController.cs" />
+    <Compile Include="Controllers\AddressBookController.cs" />
+    <Compile Include="Controllers\AdvertisementController.cs" />
+    <Compile Include="Controllers\AppConfigController.cs" />
+    <Compile Include="Controllers\AppPermissionController.cs" />
+    <Compile Include="Controllers\AttentionOperateController.cs" />
+    <Compile Include="Controllers\Base\ControllerBase.cs" />
+    <Compile Include="Controllers\Base\ControllerHelp.cs" />
+    <Compile Include="Controllers\BusinessCardController.cs" />
+    <Compile Include="Controllers\ChannelController.cs" />
+    <Compile Include="Controllers\CommonServicesController.cs" />
+    <Compile Include="Controllers\Conference\AgendaController.cs" />
+    <Compile Include="Controllers\Conference\AttendeeController.cs" />
+    <Compile Include="Controllers\Conference\BannerConfigController.cs" />
+    <Compile Include="Controllers\Conference\BusRouteController.cs" />
+    <Compile Include="Controllers\Conference\ConferenceBigScreenController.cs" />
+    <Compile Include="Controllers\Conference\ConferenceController.cs" />
+    <Compile Include="Controllers\Conference\ConferenceTopicCollection.cs" />
+    <Compile Include="Controllers\Conference\DialogController.cs" />
+    <Compile Include="Controllers\Conference\MeetingMaterialController.cs" />
+    <Compile Include="Controllers\Conference\MomentController.cs" />
+    <Compile Include="Controllers\Conference\NoticeController.cs" />
+    <Compile Include="Controllers\Conference\QuestionnaireController.cs" />
+    <Compile Include="Controllers\Conference\SeatsController.cs" />
+    <Compile Include="Controllers\Conference\SignInController.cs" />
+    <Compile Include="Controllers\Conference\SignInSettingController.cs" />
+    <Compile Include="Controllers\Conference\SiteServiceController.cs" />
+    <Compile Include="Controllers\Conference\TopicController.cs" />
+    <Compile Include="Controllers\Conference\TopicPersonController.cs" />
+    <Compile Include="Controllers\Conference\VehicleBookingController.cs" />
+    <Compile Include="Controllers\Conference\WorkerController.cs" />
+    <Compile Include="Controllers\Conference\WorkTypeController.cs" />
+    <Compile Include="Controllers\ContactsLabelController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeServicesController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Controllers\GreetingsController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\IMController.cs" />
+    <Compile Include="Controllers\ImportantNoticeController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\ManagementReportController.cs" />
+    <Compile Include="Controllers\MeetingController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\MessagePushController.cs" />
+    <Compile Include="Controllers\MossNoticeTestController.cs" />
+    <Compile Include="Controllers\NewsControllers.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\OperationLog.cs" />
+    <Compile Include="Controllers\PerformanceReportController.cs" />
+    <Compile Include="Controllers\PlanManageReatController.cs" />
+    <Compile Include="Controllers\PunchManagementController.cs" />
+    <Compile Include="Controllers\PushCenterController.cs" />
+    <Compile Include="Controllers\ResearchDataController.cs" />
+    <Compile Include="Controllers\ScheduleManageController.cs" />
+    <Compile Include="Controllers\SecretaryWeeklyController.cs" />
+    <Compile Include="Controllers\ShareFileController.cs" />
+    <Compile Include="Controllers\Share\ArticleController.cs" />
+    <Compile Include="Controllers\Share\CommentController.cs" />
+    <Compile Include="Controllers\Share\GroupController.cs" />
+    <Compile Include="Controllers\Share\MenuController.cs" />
+    <Compile Include="Controllers\Share\RecordController.cs" />
+    <Compile Include="Controllers\Share\SendGroupController.cs" />
+    <Compile Include="Controllers\SignController.cs" />
+    <Compile Include="Controllers\SysUserAuthorityController.cs" />
+    <Compile Include="Controllers\TaskManageController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UserBehaviorController.cs" />
+    <Compile Include="Controllers\UserFavController.cs" />
+    <Compile Include="Controllers\UserHeadPhotoController.cs" />
+    <Compile Include="Controllers\UserOperationRecordController.cs" />
+    <Compile Include="Controllers\UserTaksOperationController.cs" />
+    <Compile Include="Controllers\UserTaskController.cs" />
+    <Compile Include="Controllers\VersionController.cs" />
+    <Compile Include="Controllers\VhallController.cs" />
+    <Compile Include="Controllers\VoteController.cs" />
+    <Compile Include="Controllers\WorkRegionController.cs" />
+    <Compile Include="Controllers\WorkRegionMenuController.cs" />
+    <Compile Include="Controllers\WorkReportController.cs" />
+    <Compile Include="Controllers\YuanXinOfficeController.cs" />
+    <Compile Include="Converter\DefaultConverter.cs" />
+    <Compile Include="Converter\FieldSaleConverter.cs" />
+    <Compile Include="Converter\LeavePassNotice.cs" />
+    <Compile Include="Converter\QuestionnaireConverter.cs" />
+    <Compile Include="Domain\ResearchData\ResearchDataDomain.cs" />
+    <Compile Include="Domain\Sign\PunchStatistical.cs" />
+    <Compile Include="Domain\Stock\StockDomain.cs" />
+    <Compile Include="Domain\TaskManage\TaskDomain.cs" />
+    <Compile Include="Domain\TaskManage\TaskObserver.cs" />
+    <Compile Include="Domain\TaskManage\TaskSubject.cs" />
+    <Compile Include="Domain\YuanXinOfficeCommon\PushDomain.cs" />
+    <Compile Include="Enum\EnumAdvertisementType.cs" />
+    <Compile Include="Enum\EnumAppHomeSlideType.cs" />
+    <Compile Include="Enum\EnumBannerType.cs" />
+    <Compile Include="Enum\EnumBusinessCardType.cs" />
+    <Compile Include="Enum\EnumMessageModuleType.cs" />
+    <Compile Include="Enum\EnumMomentType.cs" />
+    <Compile Include="Enum\EnumResponseStatus.cs" />
+    <Compile Include="Enum\EnumSignSourceType.cs" />
+    <Compile Include="Enum\EnumSiteServiceType.cs" />
+    <Compile Include="Enum\EnumStatus.cs" />
+    <Compile Include="Enum\EnumTaskType.cs" />
+    <Compile Include="Enum\EnumUserFavInformationType.cs" />
+    <Compile Include="Enum\EnumUserFocusType.cs" />
+    <Compile Include="Enum\EnumWorkRegionMenuCategory.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\ExtensionString.cs" />
+    <Compile Include="Extensions\ImageUtility.cs" />
+    <Compile Include="Extensions\MTWFile.cs" />
+    <Compile Include="Extensions\NetworkShareAccesser.cs" />
+    <Compile Include="Extensions\PictureProcessing.cs" />
+    <Compile Include="Extensions\QrCode.cs" />
+    <Compile Include="Extensions\QrCodeLogo.cs" />
+    <Compile Include="Extensions\RedisManager.cs" />
+    <Compile Include="Extensions\Seagull2UserBaseExtension.cs" />
+    <Compile Include="Models\ActivityNew\ActivityApplyInfoModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityApplySetModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityApplySetOrigModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityCategoryModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityCategoryRecordModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityInfoModel.cs" />
+    <Compile Include="Models\ActivityNew\ActivityRecordModel.cs" />
+    <Compile Include="Models\Activity\AbstractBean.cs" />
+    <Compile Include="Models\Activity\ActionHelper\ActivityHelper.cs" />
+    <Compile Include="Models\Activity\ActionHelper\DefaultHelper.cs" />
+    <Compile Include="Models\Activity\ActionHelper\DefaultPageable.cs" />
+    <Compile Include="Models\Activity\ActionHelper\LogHelper.cs" />
+    <Compile Include="Models\Activity\ActionHelper\QueryCache.cs" />
+    <Compile Include="Models\Activity\ActivityBroadcastBean.cs" />
+    <Compile Include="Models\Activity\ActivityEventBean.cs" />
+    <Compile Include="Models\Activity\ActivityEventInfo.cs" />
+    <Compile Include="Models\Activity\ActivityInfo.cs" />
+    <Compile Include="Models\Activity\ActivityLotteryBean.cs" />
+    <Compile Include="Models\Activity\ActivityWorksInfo.cs" />
+    <Compile Include="Models\Activity\AttachmentBean.cs" />
+    <Compile Include="Models\Activity\AwardsSettingBean.cs" />
+    <Compile Include="Models\Activity\OfflineActivityDetail.cs" />
+    <Compile Include="Models\Activity\OfflineOrderInfo.cs" />
+    <Compile Include="Models\Activity\OnlineActivityDetail.cs" />
+    <Compile Include="Models\Activity\ProjectBean.cs" />
+    <Compile Include="Models\Activity\ProjectTagBean.cs" />
+    <Compile Include="Models\Activity\WorkAwardsBean.cs" />
+    <Compile Include="Models\Adavertisement\AdvertisementModel.cs" />
+    <Compile Include="Models\AddressBook\Contact.cs" />
+    <Compile Include="Models\AddressBook\ContactsModel.cs" />
+    <Compile Include="Models\AddressBook\EmailTempleModel.cs" />
+    <Compile Include="Models\AddressBook\EnumType\AttentionTypeEnum.cs" />
+    <Compile Include="Models\AddressBook\InvitedRecordModel.cs" />
+    <Compile Include="Models\AddressBook\OguUserInfo.cs" />
+    <Compile Include="Models\AddressBook\Seagull2RelationModel.cs" />
+    <Compile Include="Models\AddressBook\SeagullUsersModel.cs" />
+    <Compile Include="Models\AddressBook\UserDetailModel.cs" />
+    <Compile Include="Models\AddressBook\UserInfoQueryMode.cs" />
+    <Compile Include="Models\AddressBook\UsersInfoExtend.cs" />
+    <Compile Include="Models\AppConfig\AppHomeSlideModel.cs" />
+    <Compile Include="Models\AppConfig\OceanDataModel.cs" />
+    <Compile Include="Models\APPLogin\ConnectionTokenModel.cs" />
+    <Compile Include="Models\APPLogin\LoginInfoModel.cs" />
+    <Compile Include="Models\Attention\AttentionModel.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\BusinessCard\BusinessCardModel.cs" />
+    <Compile Include="Models\BusinessCard\BusinessCardPropertyModel.cs" />
+    <Compile Include="Models\Channel\ChannelFavModel.cs" />
+    <Compile Include="Models\Channel\ChannelModel.cs" />
+    <Compile Include="Models\Common\PersonUnitModel.cs" />
+    <Compile Include="Models\Conference\AttachmentModel.cs" />
+    <Compile Include="Models\Conference\AttendeeModel.cs" />
+    <Compile Include="Models\Conference\BannerConfig.cs" />
+    <Compile Include="Models\Conference\BannerConfigModel.cs" />
+    <Compile Include="Models\Conference\Base\BaseAdapter.cs" />
+    <Compile Include="Models\Conference\Base\ExcelHelp.cs" />
+    <Compile Include="Models\Conference\Base\StringExtend.cs" />
+    <Compile Include="Models\Conference\Base\ViewBaseAdapter.cs" />
+    <Compile Include="Models\Conference\BusRouteModel.cs" />
+    <Compile Include="Models\Conference\ConferenceAgendaModel.cs" />
+    <Compile Include="Models\Conference\ConferenceAttendeeModel.cs" />
+    <Compile Include="Models\Conference\ConferenceBase.cs" />
+    <Compile Include="Models\Conference\ConferenceBigScreenModel.cs" />
+    <Compile Include="Models\Conference\ConferenceCompanyDialog.cs" />
+    <Compile Include="Models\Conference\ConferenceModel.cs" />
+    <Compile Include="Models\Conference\ConferenceTopicsModel.cs" />
+    <Compile Include="Models\Conference\DialogContentType.cs" />
+    <Compile Include="Models\Conference\DialogType.cs" />
+    <Compile Include="Models\Conference\DisableSeatsModel.cs" />
+    <Compile Include="Models\Conference\MeetingMaterial.cs" />
+    <Compile Include="Models\Conference\MomentCommentModel.cs" />
+    <Compile Include="Models\Conference\MomentsModel.cs" />
+    <Compile Include="Models\Conference\NoticeModel.cs" />
+    <Compile Include="Models\Conference\PraiseDetailModel.cs" />
+    <Compile Include="Models\Conference\SeatModel.cs" />
+    <Compile Include="Models\Conference\SignInModel.cs" />
+    <Compile Include="Models\Conference\SignInSetting.cs" />
+    <Compile Include="Models\Conference\SiteServiceModel.cs" />
+    <Compile Include="Models\Conference\SiteServiceTypeModel.cs" />
+    <Compile Include="Models\Conference\TopicModel.cs" />
+    <Compile Include="Models\Conference\TopicPersonModels.cs" />
+    <Compile Include="Models\Conference\VehicleBookingModel.cs" />
+    <Compile Include="Models\Conference\WorkerModel.cs" />
+    <Compile Include="Models\Conference\WorkerTypeModel.cs" />
+    <Compile Include="Models\ConnectionNameDefine.cs" />
+    <Compile Include="Models\ContactsLabel\ContactsLabelModel.cs" />
+    <Compile Include="Models\ContactsLabel\ContactsLabelPersonModel.cs" />
+    <Compile Include="Models\Feedback\FeedbackImageModel.cs" />
+    <Compile Include="Models\Feedback\FeedbackModel.cs" />
+    <Compile Include="Models\Greetings\GreetingsContentModel.cs" />
+    <Compile Include="Models\Greetings\GreetingsModel.cs" />
+    <Compile Include="Models\IM\GroupInfoModel.cs" />
+    <Compile Include="Models\IM\GroupMemberModel.cs" />
+    <Compile Include="Models\InformationNews\ArticlePointModel.cs" />
+    <Compile Include="Models\InformationNews\CommentModel.cs" />
+    <Compile Include="Models\InformationNews\PointRecordModel.cs" />
+    <Compile Include="Models\InformationNews\VisitLogsModel.cs" />
+    <Compile Include="Models\Invoice\InvoiceHeaderModel.cs" />
+    <Compile Include="Models\Invoice\InvoiceModel.cs" />
+    <Compile Include="Models\ManagementReport\ArticlePointOfPraise.cs" />
+    <Compile Include="Models\ManagementReport\CommentListModel.cs" />
+    <Compile Include="Models\ManagementReport\CommentModel.cs" />
+    <Compile Include="Models\ManagementReport\PointPraiseRecordModel.cs" />
+    <Compile Include="Models\ManagementReport\SiteVisitLogModel.cs" />
+    <Compile Include="Models\ManagementReport\ViewOrPraiseCountModel.cs" />
+    <Compile Include="Models\MessagePush\MessagePushGroupModel.cs" />
+    <Compile Include="Models\MessagePush\MessagePushGroupPersonModel.cs" />
+    <Compile Include="Models\MessagePush\MessagePushRecordModel.cs" />
+    <Compile Include="Models\Message\EnumMessageStatus.cs" />
+    <Compile Include="Models\Message\EnumMessageTitle.cs" />
+    <Compile Include="Models\Message\MessageForYuanXin.cs" />
+    <Compile Include="Models\Message\MessageForYxBase.cs" />
+    <Compile Include="Models\Message\MessageInitializationView.cs" />
+    <Compile Include="Models\Message\MessageModel.cs" />
+    <Compile Include="Models\Message\MessagePageView.cs" />
+    <Compile Include="Models\Message\ResultView.cs" />
+    <Compile Include="Models\News\ImageProcessingModel.cs" />
+    <Compile Include="Models\News\ListItem.cs" />
+    <Compile Include="Models\News\NewsModel.cs" />
+    <Compile Include="Models\News\NewsXmls.cs" />
+    <Compile Include="Models\News\ReadXmlModel.cs" />
+    <Compile Include="Models\News\RecommendedImageNewsModel.cs" />
+    <Compile Include="Models\News\RecommendedNewsModel.cs" />
+    <Compile Include="Models\News\SlideItem.cs" />
+    <Compile Include="Models\News\ViewModel.cs" />
+    <Compile Include="Models\Notification\NotificationsModel.cs" />
+    <Compile Include="Models\Notification\NotificationXmls.cs" />
+    <Compile Include="Models\Notification\ViewModel.cs" />
+    <Compile Include="Models\PerformanceReport\EIPMenuModel.cs" />
+    <Compile Include="Models\PerformanceReport\PerformanceReportMenuModel.cs" />
+    <Compile Include="Models\PerformanceReport\PerformanceReportUserFocusModel.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\PunchManagement\PunchDepartmentModel.cs" />
+    <Compile Include="Models\PunchManagement\PunchManagementModel.cs" />
+    <Compile Include="Models\PunchManagement\PunchManagerModel.cs" />
+    <Compile Include="Models\ResearchData\RD_Benchmark_EnterpriseSaleStatisticsModel.cs" />
+    <Compile Include="Models\ResearchData\RD_Benchmark_ProjectSaleStatisticalModel.cs" />
+    <Compile Include="Models\ResearchData\RD_EconomicModel.cs" />
+    <Compile Include="Models\ResearchData\RD_InfoModel.cs" />
+    <Compile Include="Models\ResearchData\RD_LandMarketModel.cs" />
+    <Compile Include="Models\ResearchData\RD_NHM_AnnualStatisticsModel.cs" />
+    <Compile Include="Models\ResearchData\RD_NHM_MonthlyStatisticsModel.cs" />
+    <Compile Include="Models\ResearchData\RD_PolicyModel.cs" />
+    <Compile Include="Models\ResearchData\RD_PopulationModel.cs" />
+    <Compile Include="Models\ScheduleManage\ScheduleModel.cs" />
+    <Compile Include="Models\ScheduleManage\ScheduleParticipantsModel.cs" />
+    <Compile Include="Models\ShareFile\ShareFileModel.cs" />
+    <Compile Include="Models\Share\ArticleModel.cs" />
+    <Compile Include="Models\Share\CommentModel.cs" />
+    <Compile Include="Models\Share\GroupModel.cs" />
+    <Compile Include="Models\Share\MenuModel.cs" />
+    <Compile Include="Models\Share\RecordModel.cs" />
+    <Compile Include="Models\Share\SendGroupModel.cs" />
+    <Compile Include="Models\Share\SendGroupPersonModel.cs" />
+    <Compile Include="Models\Sign\EmployeeServicePunchList.cs" />
+    <Compile Include="Models\Sign\EmployeeServicesModel.cs" />
+    <Compile Include="Models\Sign\PunchMonth.cs" />
+    <Compile Include="Models\Sign\PunchQuickSettingModel.cs" />
+    <Compile Include="Models\Sign\PunchRemindSettingModel.cs" />
+    <Compile Include="Models\Sign\StandardPunchModel.cs" />
+    <Compile Include="Models\Sign\WorkMessages.cs" />
+    <Compile Include="Models\Stock\StockModel.cs" />
+    <Compile Include="Models\System\Sys_AuthorityManagementModel.cs" />
+    <Compile Include="Models\System\Sys_MenuManagementModel.cs" />
+    <Compile Include="Models\System\Sys_RoleManagementModel.cs" />
+    <Compile Include="Models\System\Sys_RoleUserManagementModel.cs" />
+    <Compile Include="Models\Sys_Menu\Sys_MenuModel.cs" />
+    <Compile Include="Models\Sys_Menu\Sys_UserMenuModel.cs" />
+    <Compile Include="Models\Sys_Menu\Sys_UserModel.cs" />
+    <Compile Include="Models\TaskManage\TaskCopyPersonModel.cs" />
+    <Compile Include="Models\TaskManage\TaskHideModel.cs" />
+    <Compile Include="Models\TaskManage\TaskMessageModel.cs" />
+    <Compile Include="Models\TaskManage\TaskModel.cs" />
+    <Compile Include="Models\Test\TestModel.cs" />
+    <Compile Include="Models\UrgeRecord\UrgeRecordModel.cs" />
+    <Compile Include="Models\UserBehavior\UserBehaviorLogModel.cs" />
+    <Compile Include="Models\UserBehavior\UserBehaviorModuleModel.cs" />
+    <Compile Include="Models\UserFav\UserFavInformationModel.cs" />
+    <Compile Include="Models\UserHeadPhoto\UserHeadPhotoModel.cs" />
+    <Compile Include="Models\UserOperationRecord\UserOperationRecordModel.cs" />
+    <Compile Include="Models\UserTask\UserTaskOperation.cs" />
+    <Compile Include="Models\UserYuanxinInfoWrapper.cs" />
+    <Compile Include="Models\Util\DatabaseUtil.cs" />
+    <Compile Include="Models\Util\EmployeeExtend.cs" />
+    <Compile Include="Models\Version\SystemUpdateRecordModel.cs" />
+    <Compile Include="Models\Vote\VoteInfoModel.cs" />
+    <Compile Include="Models\Vote\VoteManagerModel.cs" />
+    <Compile Include="Models\Vote\VoteOptionModel.cs" />
+    <Compile Include="Models\Vote\VotePersonModel.cs" />
+    <Compile Include="Models\Vote\VoteQuestionModel.cs" />
+    <Compile Include="Models\Vote\VoteRecordModel.cs" />
+    <Compile Include="Models\Weather\WeatherModel.cs" />
+    <Compile Include="Models\WorkRegionMenu\WorkRegionMenuModel.cs" />
+    <Compile Include="Models\WorkReport\WorkReportContentModel.cs" />
+    <Compile Include="Models\WorkReport\WorkReportDetailsModel.cs" />
+    <Compile Include="Models\WorkReport\WorkReportFieldModel.cs" />
+    <Compile Include="Models\WorkReport\WorkReportTemplateModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Attention\AttentionService.cs" />
+    <Compile Include="Services\Attention\IAttentionService.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Services\IEmployeeService.cs" />
+    <Compile Include="Services\IPlanManageRate.cs" />
+    <Compile Include="Services\IUrlConverter.cs" />
+    <Compile Include="Services\IUserSettingsService.cs" />
+    <Compile Include="Services\IUserTaskService.cs" />
+    <Compile Include="Services\Meeting\MeetingRoomService.cs" />
+    <Compile Include="Services\Meeting\MeetingsYuanXinAdapter.cs" />
+    <Compile Include="Services\Meeting\UserAdapter.cs" />
+    <Compile Include="Services\MyMessage\MyInfoimage.cs" />
+    <Compile Include="Services\PlanManageRate.cs" />
+    <Compile Include="Services\Signin\IPunchService.cs" />
+    <Compile Include="Services\Signin\PunchService.cs" />
+    <Compile Include="Services\UrlConvertHelper.cs" />
+    <Compile Include="Services\UserSettingsService.cs" />
+    <Compile Include="Services\UserTaskModel.cs" />
+    <Compile Include="Services\UserTaskService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewsModel\ActivityNew\ActivityApplyInfoViewModel.cs" />
+    <Compile Include="ViewsModel\ActivityNew\ActivityApplySetOrigViewModel.cs" />
+    <Compile Include="ViewsModel\ActivityNew\ActivityCategoryViewModel.cs" />
+    <Compile Include="ViewsModel\ActivityNew\ActivityInfoViewModel.cs" />
+    <Compile Include="ViewsModel\ActivityNew\ActivityRecordViewModel.cs" />
+    <Compile Include="ViewsModel\AddressBook\ContactsViewModel.cs" />
+    <Compile Include="ViewsModel\Advertisement\AdvertisementViewModel.cs" />
+    <Compile Include="ViewsModel\AppConfig\AppHomeSlideViewModel.cs" />
+    <Compile Include="ViewsModel\AppConfig\OceanDataViewModel.cs" />
+    <Compile Include="ViewsModel\BaseView.cs" />
+    <Compile Include="ViewsModel\BusinessCard\BusinessCardViewModel.cs" />
+    <Compile Include="ViewsModel\Channel\ChannelFavViewModel.cs" />
+    <Compile Include="ViewsModel\Channel\ChannelViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\AgendaViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\AttendeeViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\Base\ViewModelBase.cs" />
+    <Compile Include="ViewsModel\Conference\Base\ViewPageBase.cs" />
+    <Compile Include="ViewsModel\Conference\BusViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\ConferenceTopicsViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\ConferenceViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\EmployeeAttendanceViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\QuestionnaireViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\SeatsViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\SignInViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\StandardViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\VehicleBookingViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\WorkerViewModel.cs" />
+    <Compile Include="ViewsModel\Conference\WorkTypeViewModel.cs" />
+    <Compile Include="ViewsModel\ContactsLabel\ContactsLabelViewModel.cs" />
+    <Compile Include="ViewsModel\Contacts\ContactsViewModel.cs" />
+    <Compile Include="ViewsModel\EmployeeService\EmployeeServicesViewModel.cs" />
+    <Compile Include="ViewsModel\Employee\EmployeeViewModel.cs" />
+    <Compile Include="ViewsModel\Feedback\FeedbackViewModel.cs" />
+    <Compile Include="ViewsModel\Greetings\GreetingsViewModel.cs" />
+    <Compile Include="ViewsModel\ImportantNotice\DetailsViewModel.cs" />
+    <Compile Include="ViewsModel\ImportantNotice\ListItemViewModel.cs" />
+    <Compile Include="ViewsModel\Invoice\InvoiceHeaderViewModel.cs" />
+    <Compile Include="ViewsModel\Invoice\InvoiceViewModel.cs" />
+    <Compile Include="ViewsModel\ManagementReport\ManagementReportComment.cs" />
+    <Compile Include="ViewsModel\ManagementReport\ManagementReportViewModel.cs" />
+    <Compile Include="ViewsModel\ManagementReport\PagingUtil.cs" />
+    <Compile Include="ViewsModel\Meeting\MeetingModel.cs" />
+    <Compile Include="ViewsModel\MessagePush\MessagePushViewModel.cs" />
+    <Compile Include="ViewsModel\Moss\NewsViewModel.cs" />
+    <Compile Include="ViewsModel\Moss\NoticeViewModel.cs" />
+    <Compile Include="ViewsModel\PerformanceReport\PerformanceReportMenuViewModel.cs" />
+    <Compile Include="ViewsModel\PlanManage\PlanManageViewModel.cs" />
+    <Compile Include="ViewsModel\PunchManagement\PunchManagementViewModel.cs" />
+    <Compile Include="ViewsModel\ResearchData\ResearchDataViewModel.cs" />
+    <Compile Include="ViewsModel\ScheduleManage\ScheduleManageModel.cs" />
+    <Compile Include="ViewsModel\Share\ArticleViewModel.cs" />
+    <Compile Include="ViewsModel\Share\CommentViewModel.cs" />
+    <Compile Include="ViewsModel\Share\GroupViewModel.cs" />
+    <Compile Include="ViewsModel\Share\MenuViewModel.cs" />
+    <Compile Include="ViewsModel\Share\RecordViewModel.cs" />
+    <Compile Include="ViewsModel\Share\SendGroupViewModel.cs" />
+    <Compile Include="ViewsModel\Sign\SignViewModel.cs" />
+    <Compile Include="ViewsModel\Stock\StockViewModel.cs" />
+    <Compile Include="ViewsModel\Sys_Menu\SysUserAuthorityViewModel.cs" />
+    <Compile Include="ViewsModel\Sys_Menu\Sys_MenuViewModel.cs" />
+    <Compile Include="ViewsModel\Sys_Menu\Sys_UserViewModel.cs" />
+    <Compile Include="ViewsModel\TaskManage\TaskManageViewModel.cs" />
+    <Compile Include="ViewsModel\Test\TestViewModel.cs" />
+    <Compile Include="ViewsModel\UserBehavior\UserBehaviorLogViewModel.cs" />
+    <Compile Include="ViewsModel\UserFav\UserFavInformationViewModel.cs" />
+    <Compile Include="ViewsModel\UserHeadPhoto\UserHeadPhotoViewModel.cs" />
+    <Compile Include="ViewsModel\UserOperationRecord\UserOperationRecordViewModel.cs" />
+    <Compile Include="ViewsModel\Version\SystemUpdateRecordViewModel.cs" />
+    <Compile Include="ViewsModel\Vote\VoteViewModel.cs" />
+    <Compile Include="ViewsModel\Weather\WeatherViewModel.cs" />
+    <Compile Include="ViewsModel\WorkRegionMenu\WorkRegionMenuViewModel.cs" />
+    <Compile Include="ViewsModel\WorkReport\WorkReportDetailViewModel.cs" />
+    <Compile Include="ViewsModel\WorkReport\WorkReportListDetailViewModel.cs" />
+    <Compile Include="ViewsModel\WorkReport\WorkReportTemplateViewModel.cs" />
+    <Compile Include="ViewsModel\YuanXinOfficeCommon\YuanXinOfficeCommon.cs" />
+    <Compile Include="ZhongChou\API\Common\AliyunOSSHelper.cs" />
+    <Compile Include="ZhongChou\API\Common\CommonHelper.cs" />
+    <Compile Include="ZhongChou\API\Common\JsonHelper.cs" />
+    <Compile Include="ZhongChou\API\Common\MessageHelp.cs" />
+    <Compile Include="ZhongChou\API\Common\ProcessStepHelper.cs" />
+    <Compile Include="ZhongChou\API\Models\ActionParameter.cs" />
+    <Compile Include="ZhongChou\API\Models\ActivityView.cs" />
+    <Compile Include="ZhongChou\API\Models\ActivityWorksForm.cs" />
+    <Compile Include="ZhongChou\API\Models\ApiResult.cs" />
+    <Compile Include="ZhongChou\API\Models\AppIndexView.cs" />
+    <Compile Include="ZhongChou\API\Models\AttachmentForm.cs" />
+    <Compile Include="ZhongChou\API\Models\CommentForm.cs" />
+    <Compile Include="ZhongChou\API\Models\FeedbackForm.cs" />
+    <Compile Include="ZhongChou\API\Models\ListView.cs" />
+    <Compile Include="ZhongChou\API\Models\OrderDetailView.cs" />
+    <Compile Include="ZhongChou\API\Models\OrderForm.cs" />
+    <Compile Include="ZhongChou\API\Models\OrderView_Case.cs" />
+    <Compile Include="ZhongChou\API\Models\ProjectView.cs" />
+    <Compile Include="ZhongChou\API\Models\SubmitOrderView_CaseActivity.cs" />
+    <Compile Include="ZhongChou\API\Models\UserEvaluationForm.cs" />
+    <Compile Include="ZhongChou\API\Models\UserVoteForm.cs" />
+    <Compile Include="ZhongChou\API\Models\VideoView.cs" />
+    <Compile Include="ZhongChou\API\Models\WxModel.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\AlipayConfig.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\AlipayCore.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\AlipayNotify.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\AlipaySignature.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\AopException.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\RSA.cs" />
+    <Compile Include="ZhongChou\API\Pay\Alipay\RSACryptoServiceProviderExtension.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\Config.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\Data.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\Exception.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\HttpService.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\HttpUtil.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\Log.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\MD5Util.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\Notify.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\TenpayUtil.cs" />
+    <Compile Include="ZhongChou\API\Pay\Wxpay\WxPayApi.cs" />
+    <Compile Include="ZhongChou\Data\BaseEntity\Attachment.cs" />
+    <Compile Include="ZhongChou\Data\BaseEntity\AttachmentTypeEnum.cs" />
+    <Compile Include="ZhongChou\Data\Common\AdapterExtension.cs" />
+    <Compile Include="ZhongChou\Data\Common\BusinessCodeDefine.cs" />
+    <Compile Include="ZhongChou\Data\Common\CommonHelper.cs" />
+    <Compile Include="ZhongChou\Data\Common\DatabaseUtility.cs" />
+    <Compile Include="ZhongChou\Data\Common\SqlHelper.cs" />
+    <Compile Include="ZhongChou\Data\Common\SysSetting.cs" />
+    <Compile Include="ZhongChou\Data\Common\SysSettingGroup.cs" />
+    <Compile Include="ZhongChou\Data\Common\SysSettingHelper.cs" />
+    <Compile Include="ZhongChou\Data\Enums\AuditStatus.cs" />
+    <Compile Include="ZhongChou\Data\Enums\EvaluationType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\JourneyStatus.cs" />
+    <Compile Include="ZhongChou\Data\Enums\MessageType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\NewsFeedAction.cs" />
+    <Compile Include="ZhongChou\Data\Enums\OpinionType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\OrderStatus.cs" />
+    <Compile Include="ZhongChou\Data\Enums\OrderType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\PayWayType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\ProcessType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\ProjectState.cs" />
+    <Compile Include="ZhongChou\Data\Enums\ProjectTypeEnum.cs" />
+    <Compile Include="ZhongChou\Data\Enums\ReasonType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\SourceType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\TradeCategoryEnum.cs" />
+    <Compile Include="ZhongChou\Data\Enums\UserFocusType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\UserMessageStatus.cs" />
+    <Compile Include="ZhongChou\Data\Enums\UserType.cs" />
+    <Compile Include="ZhongChou\Data\Enums\WorksSelectedTypeEnum.cs" />
+    <Compile Include="ZhongChou\Data\Models\ActivityBroadcast.cs" />
+    <Compile Include="ZhongChou\Data\Models\ActivityEvent.cs" />
+    <Compile Include="ZhongChou\Data\Models\ActivityWorks.cs" />
+    <Compile Include="ZhongChou\Data\Models\AwardsSetting.cs" />
+    <Compile Include="ZhongChou\Data\Models\CaseOrder.cs" />
+    <Compile Include="ZhongChou\Data\Models\CaseProject.cs" />
+    <Compile Include="ZhongChou\Data\Models\FailedReason.cs" />
+    <Compile Include="ZhongChou\Data\Models\Feedback.cs" />
+    <Compile Include="ZhongChou\Data\Models\Journey.cs" />
+    <Compile Include="ZhongChou\Data\Models\LetvCloud.cs" />
+    <Compile Include="ZhongChou\Data\Models\Message.cs" />
+    <Compile Include="ZhongChou\Data\Models\NewsFeed.cs" />
+    <Compile Include="ZhongChou\Data\Models\OAuth.UserHeadPhoto.cs" />
+    <Compile Include="ZhongChou\Data\Models\OAuth.UserInfo.cs" />
+    <Compile Include="ZhongChou\Data\Models\OnlineProject.cs" />
+    <Compile Include="ZhongChou\Data\Models\Opinion.cs" />
+    <Compile Include="ZhongChou\Data\Models\Order.cs" />
+    <Compile Include="ZhongChou\Data\Models\OrderAddress.cs" />
+    <Compile Include="ZhongChou\Data\Models\ProcessStep.cs" />
+    <Compile Include="ZhongChou\Data\Models\Project.cs" />
+    <Compile Include="ZhongChou\Data\Models\ProjectTag.cs" />
+    <Compile Include="ZhongChou\Data\Models\ProjectType.cs" />
+    <Compile Include="ZhongChou\Data\Models\Topic.cs" />
+    <Compile Include="ZhongChou\Data\Models\TransactionInfo.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserComment.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserEvaluation.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserFocus.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserInfo.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserMessage.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserPoint.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserReComment.cs" />
+    <Compile Include="ZhongChou\Data\Models\UserVote.cs" />
+    <Compile Include="ZhongChou\Data\Models\WorksAwards.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ActivityFocusViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ActivityFocusViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ActivityWorksViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ActivityWorksViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ApplyUserInfoViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ApplyUserInfoViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\CaseProjecttViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\CaseProjectViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\CommentViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\CommentViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\EvaluationViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\EvaluationViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OnlineProjectViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OnlineProjectViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OrderEnrollViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OrderEnrollViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OrderViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\OrderViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\TopicsViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\TopicsViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\TopProjectViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\TopProjectViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\UserCommentViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\UserCommentViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\WorksAwardsViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\WorksAwardsViewDataQuery.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ZcProjectViewData.cs" />
+    <Compile Include="ZhongChou\Data\ViewData\ZcProjectViewDataQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.htm" />
+    <Content Include="lib\Aliyun.OSS.dll" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\MCS.Library.SOA.DataObjects.Questionnaire.dll" />
+    <Content Include="lib\MDXHelper.dll" />
+    <Content Include="lib\MobileBusiness.Common.Data.dll" />
+    <Content Include="lib\NPinyin.dll" />
+    <Content Include="lib\SinoOcean.Seagull2.SendExpressBroker.dll" />
+    <Content Include="lib\SinoOcean.Seagull2.TransactionData.SecretaryService.dll" />
+    <Content Include="lib\YuanXin.Framework.Configuration.dll" />
+    <Content Include="lib\YuanXin.Framework.DbHelper.dll" />
+    <Content Include="lib\YuanXin.Framework.dll" />
+    <Content Include="lib\YuanXin.Framework.IM.dll" />
+    <Content Include="lib\YuanXin.Framework.OAuth.Identity.dll" />
+    <Content Include="lib\YuanXin.Framework.Oauth.SqlServer.dll" />
+    <Content Include="lib\YuanXin.Framework.OauthInfrastructure.dll" />
+    <Content Include="XmlConfig\Information.xml" />
+    <Content Include="XmlConfig\Live.xml" />
+    <Content Include="XmlConfig\News.xml" />
+    <Content Include="XmlConfig\Notifications.xml" />
+    <Content Include="XmlConfig\NotificationsParty.xml" />
+    <Content Include="XmlConfig\NotificationsYB.xml" />
+    <Content Include="XmlConfig\Organ.xml" />
+    <Content Include="XmlConfig\Punch.xml" />
+    <Content Include="XmlConfig\RecommendedNews.xml" />
+    <Content Include="XmlConfig\RecommendedNotifications.xml" />
+    <Content Include="ZhongChou\API\AliYun\Aliyun.OSS.dll" />
+    <None Include="Connected Services\NewsServer\MossListOperation.disco" />
+    <None Include="Connected Services\NewsServer\configuration91.svcinfo" />
+    <None Include="Connected Services\NewsServer\configuration.svcinfo" />
+    <None Include="Connected Services\NewsServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NotificationsServer\MossListOperation.disco" />
+    <None Include="Connected Services\NotificationsServer\configuration91.svcinfo" />
+    <None Include="Connected Services\NotificationsServer\configuration.svcinfo" />
+    <None Include="Connected Services\NotificationsServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PostSMSForDHSTSoap\PostSMSForDHST.disco" />
+    <None Include="Connected Services\PostSMSForDHSTSoap\configuration91.svcinfo" />
+    <None Include="Connected Services\PostSMSForDHSTSoap\configuration.svcinfo" />
+    <None Include="Connected Services\PostSMSForDHSTSoap\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NewsServer\MossListOperation.wsdl" />
+    <None Include="Connected Services\NotificationsServer\MossListOperation.wsdl" />
+    <None Include="Connected Services\PostSMSForDHSTSoap\PostSMSForDHST.wsdl" />
+    <Content Include="Config\SysSetting.xml" />
+    <Content Include="HtmlTemplate\commonview.html" />
+    <Content Include="HtmlTemplate\employee_invite_email.html" />
+    <Content Include="HtmlTemplate\employee_invite_email.jpg" />
+    <Content Include="HtmlTemplate\employee_invite_email_v1.html" />
+    <Content Include="HtmlTemplate\feedback_email.html" />
+    <Content Include="HtmlTemplate\task_urge_email.html" />
+    <Content Include="Images\07c837237f824505bdeb19ed80cba1a2.png" />
+    <Content Include="Images\conference.png" />
+    <Content Include="Images\default_user_photo.png" />
+    <Content Include="Images\gender01.png" />
+    <Content Include="Images\gender02.png" />
+    <Content Include="Images\live.png" />
+    <Content Include="Images\meeting\1.jpg" />
+    <Content Include="Images\meeting\2.png" />
+    <Content Include="Images\meeting\3.png" />
+    <Content Include="Images\meeting\4.png" />
+    <Content Include="Images\meeting\sysPhoto.png" />
+    <Content Include="Images\OceanDataIco\会员数量.png" />
+    <Content Include="Images\OceanDataIco\住户.png" />
+    <Content Include="Images\OceanDataIco\供应商.png" />
+    <Content Include="Images\OceanDataIco\供应商数量.png" />
+    <Content Include="Images\OceanDataIco\写字楼租户.png" />
+    <Content Include="Images\OceanDataIco\写字楼签约.png" />
+    <Content Include="Images\OceanDataIco\商场客流.png" />
+    <Content Include="Images\OceanDataIco\商户.png" />
+    <Content Include="Images\OceanDataIco\商户签约.png" />
+    <Content Include="Images\OceanDataIco\客户数量.png" />
+    <Content Include="Images\OceanDataIco\待办数量.png" />
+    <Content Include="Images\OceanDataIco\远洋会员.png" />
+    <Content Include="Images\OceanDataIco\远薪APP安装数量.png" />
+    <Content Include="Images\OceanDataIco\远薪商家端.png" />
+    <Content Include="Images\OceanDataIco\远薪客户.png" />
+    <Content Include="Images\OceanDataIco\远薪客户端.png" />
+    <Content Include="Images\OceanDataIco\远薪客户端注册用户.png" />
+    <Content Include="Images\OceanDataIco\远薪移动办公.png" />
+    <Content Include="Images\OceanDataIco\销售来电.png" />
+    <Content Include="Images\OceanDataIco\销售来访.png" />
+    <Content Include="Images\OceanDataIco\销售签约.png" />
+    <Content Include="Images\weather\0.png" />
+    <Content Include="Images\weather\1.png" />
+    <Content Include="Images\weather\10.png" />
+    <Content Include="Images\weather\11.png" />
+    <Content Include="Images\weather\12.png" />
+    <Content Include="Images\weather\13.png" />
+    <Content Include="Images\weather\14.png" />
+    <Content Include="Images\weather\15.png" />
+    <Content Include="Images\weather\16.png" />
+    <Content Include="Images\weather\17.png" />
+    <Content Include="Images\weather\18.png" />
+    <Content Include="Images\weather\19.png" />
+    <Content Include="Images\weather\2.png" />
+    <Content Include="Images\weather\20.png" />
+    <Content Include="Images\weather\21.png" />
+    <Content Include="Images\weather\22.png" />
+    <Content Include="Images\weather\23.png" />
+    <Content Include="Images\weather\24.png" />
+    <Content Include="Images\weather\25.png" />
+    <Content Include="Images\weather\26.png" />
+    <Content Include="Images\weather\27.png" />
+    <Content Include="Images\weather\28.png" />
+    <Content Include="Images\weather\29.png" />
+    <Content Include="Images\weather\3.png" />
+    <Content Include="Images\weather\30.png" />
+    <Content Include="Images\weather\31.png" />
+    <Content Include="Images\weather\32.png" />
+    <Content Include="Images\weather\33.png" />
+    <Content Include="Images\weather\34.png" />
+    <Content Include="Images\weather\35.png" />
+    <Content Include="Images\weather\36.png" />
+    <Content Include="Images\weather\37.png" />
+    <Content Include="Images\weather\38.png" />
+    <Content Include="Images\weather\4.png" />
+    <Content Include="Images\weather\5.png" />
+    <Content Include="Images\weather\6.png" />
+    <Content Include="Images\weather\7.png" />
+    <Content Include="Images\weather\8.png" />
+    <Content Include="Images\weather\9.png" />
+    <Content Include="Images\weather\99.png" />
+    <Content Include="JavaScript\swagger_lang.js" />
+    <Content Include="Resources\404.jpg" />
+    <Content Include="Resources\微信截图_20181220142142.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Resources\Model\Attendee.xlsx" />
+    <Content Include="Resources\Model\BusRouteTemplate.xlsx" />
+    <Content Include="Resources\Model\Entertain.xlsx" />
+    <Content Include="Resources\Model\ResearchData-北京.xlsx" />
+    <Content Include="Resources\Model\TopicPerson.xlsx" />
+    <Content Include="Resources\Model\WorkerTemplate.xlsx" />
+    <Content Include="Resources\Vote\workReport\A-高佳2019-01-28-2019-08-21的工作汇报.xls" />
+    <Content Include="Resources\workReport\A-高佳2019-07-02到2019-08-21的工作汇报.xlsx" />
+    <Content Include="Resources\workReport\A-高佳2019-07-05到2019-08-21的工作汇报.xlsx" />
+    <Content Include="UrlMappingSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Resources\Pic\" />
+    <Folder Include="Views\ScheduleParticipants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\NewsServer\" />
+    <WCFMetadataStorage Include="Connected Services\NotificationsServer\" />
+    <WCFMetadataStorage Include="Connected Services\PostSMSForDHSTSoap\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55365</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54209/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Grpc.Core.1.2.2\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Grpc.Core.1.2.2\build\net45\Grpc.Core.targets'))" />
+  </Target>
+  <Import Project="packages\Grpc.Core.1.2.2\build\net45\Grpc.Core.targets" Condition="Exists('packages\Grpc.Core.1.2.2\build\net45\Grpc.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target> -->
+</Project>
